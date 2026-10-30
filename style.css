@@ -1,0 +1,133 @@
+/* Reset básico de margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo geral na cor lilás */
+body {
+  background-color: #e6e6fa;
+  color: #333;
+  padding-bottom: 40px;
+}
+
+/* Cabeçalho preto conforme escolhido */
+header {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+  border-bottom: 4px solid #9370db; /* Detalhe lilás no cabeçalho */
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #dddddd;
+}
+
+header .aluno {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #e6e6fa;
+}
+
+/* Container centralizado para limitar a largura em telas grandes */
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Grid com os cards de resumo */
+.cards-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* Estilo dos cards: fundo branco, cantos arredondados, bordas lilás e pretas */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #111111; /* Borda preta principal */
+  outline: 3px solid #9370db; /* Borda lilás externa de detalhe */
+  border-radius: 12px; /* Cantos arredondados */
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111111;
+}
+
+/* Container responsivo para a tabela */
+.tabela-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #111111;
+  overflow-x: auto; /* Permite rolar pro lado em telas pequenas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px; /* Garante que as colunas não fiquem esmagadas no celular */
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Estilo do cabeçalho da tabela */
+th {
+  background-color: #111111;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Destaque para a primeira coluna (nome da disciplina) */
+td:first-child, th:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Efeito zebra nas linhas da tabela */
+tbody tr:nth-child(even) {
+  background-color: #f9f8ff;
+}
+
+/* Estilos de situação das disciplinas */
+.situacao-bom {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.situacao-indisponivel {
+  color: #757575;
+  font-style: italic;
+}
