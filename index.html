@@ -12,57 +12,82 @@
   <header>
     <h1>Boletim Digital</h1>
     <p>Ensino Fundamental — 9º Ano</p>
-    <p class="aluno">Estudante: <strong>Estudante Exemplo</strong></p>
+    <p class="aluno">Estudante: <strong>Estudante Exemplo</strong> (Turma 9B — Nº 42)</p>
   </header>
 
   <main class="container">
-    <!-- Área de cards de resumo -->
-    <section class="cards-resumo">
-      <div class="card">
-        <h3>Média Geral</h3>
-        <p id="card-media-geral">—</p>
+    <!-- Tela de Acesso por PIN -->
+    <section id="secao-login" class="card-login">
+      <h2>Acesso ao Boletim</h2>
+      <p>Digite seu PIN de acesso para visualizar e alterar suas notas.</p>
+      <div class="login-info">
+        <span><strong>Turma:</strong> 9B</span>
+        <span><strong>Chamada:</strong> 42</span>
       </div>
-
-      <div class="card">
-        <h3>Total de Faltas</h3>
-        <p id="card-total-faltas">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom-desempenho">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Precisa de Atenção</h3>
-        <p id="card-atencao">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Frequência</h3>
-        <p id="card-frequencia">—</p>
-      </div>
+      <form id="form-login">
+        <input type="password" id="input-pin" placeholder="Digite seu PIN" required autocomplete="off" />
+        <button type="submit" id="btn-entrar">Entrar</button>
+      </form>
+      <p id="msg-login" class="mensagem-status"></p>
     </section>
 
-    <!-- Tabela responsiva com as disciplinas -->
-    <section class="tabela-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Disciplina</th>
-            <th>1º Tri</th>
-            <th>2º Tri</th>
-            <th>3º Tri</th>
-            <th>Média</th>
-            <th>Faltas</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <!-- O JavaScript preencherá as linhas da tabela automaticamente -->
-        <tbody id="tabela-boletim">
-        </tbody>
-      </table>
-    </section>
+    <!-- Conteúdo do Boletim (inicialmente escondido) -->
+    <div id="conteudo-boletim" style="display: none;">
+      <!-- Barra de Ações -->
+      <div class="painel-acoes">
+        <button id="btn-alternar-edicao" class="btn-acao">Alterar dados</button>
+        <button id="btn-salvar" class="btn-acao btn-salvar" style="display: none;">Salvar alterações</button>
+        <p id="msg-edicao" class="mensagem-status"></p>
+      </div>
+
+      <!-- Área de cards de resumo -->
+      <section class="cards-resumo">
+        <div class="card">
+          <h3>Média Geral</h3>
+          <p id="card-media-geral">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-total-faltas">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-desempenho">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Precisa de Atenção</h3>
+          <p id="card-atencao">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Frequência</h3>
+          <p id="card-frequencia">—</p>
+        </div>
+      </section>
+
+      <!-- Tabela responsiva com as disciplinas -->
+      <section class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <!-- O JavaScript preencherá as linhas da tabela automaticamente -->
+          <tbody id="tabela-boletim">
+          </tbody>
+        </table>
+      </section>
+    </div>
   </main>
 
   <!-- Arquivo de scripts -->

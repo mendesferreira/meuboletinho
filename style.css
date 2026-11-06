@@ -45,6 +45,120 @@ header .aluno {
   padding: 0 16px;
 }
 
+/* Tela de login por PIN */
+.card-login {
+  background-color: #ffffff;
+  border: 2px solid #111111;
+  outline: 3px solid #9370db;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-login h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #111111;
+}
+
+.card-login p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.login-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+  background-color: #f9f8ff;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #9370db;
+  font-size: 0.95rem;
+}
+
+.card-login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #111111;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.card-login input[type="password"]:focus {
+  outline: 2px solid #9370db;
+}
+
+.card-login button {
+  width: 100%;
+  padding: 10px;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-login button:hover {
+  background-color: #9370db;
+}
+
+/* Painel de Ações e Edição */
+.painel-acoes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-acao {
+  background-color: #111111;
+  color: #ffffff;
+  border: 2px solid #9370db;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-acao:hover {
+  background-color: #9370db;
+  color: #ffffff;
+}
+
+.btn-salvar {
+  background-color: #2e7d32;
+  border-color: #1b5e20;
+}
+
+.btn-salvar:hover {
+  background-color: #1b5e20;
+}
+
+.mensagem-status {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.mensagem-status.erro {
+  color: #c62828;
+}
+
+.mensagem-status.sucesso {
+  color: #2e7d32;
+}
+
 /* Grid com os cards de resumo */
 .cards-resumo {
   display: grid;
@@ -98,6 +212,21 @@ th, td {
   border-bottom: 1px solid #e0e0e0;
 }
 
+/* Estilo dos inputs de edição na tabela */
+td input {
+  width: 60px;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+td input.campo-invalido {
+  border: 2px solid #c62828;
+  background-color: #ffebee;
+}
+
 /* Estilo do cabeçalho da tabela */
 th {
   background-color: #111111;
@@ -112,22 +241,3 @@ td:first-child, th:first-child {
 }
 
 /* Efeito zebra nas linhas da tabela */
-tbody tr:nth-child(even) {
-  background-color: #f9f8ff;
-}
-
-/* Estilos de situação das disciplinas */
-.situacao-bom {
-  color: #2e7d32;
-  font-weight: bold;
-}
-
-.situacao-atencao {
-  color: #c62828;
-  font-weight: bold;
-}
-
-.situacao-indisponivel {
-  color: #757575;
-  font-style: italic;
-}
